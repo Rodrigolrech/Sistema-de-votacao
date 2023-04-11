@@ -13,7 +13,7 @@ public class PessoaCandidata extends Pessoa {
 
   @Override
   public String getNome() {
-    return null;
+    return this.nome;
   }
 
   @Override
