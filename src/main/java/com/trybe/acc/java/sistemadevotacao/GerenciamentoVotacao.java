@@ -10,13 +10,20 @@ public class GerenciamentoVotacao {
   private ArrayList<String> cpfComputado;
   int totalVotos;
 
+  /**
+   * Metodo para Gerenciar as Votacoes.
+   */
   public GerenciamentoVotacao() {
+
     pessoasEleitoras = new ArrayList<>();
     pessoasCandidatas = new ArrayList<>();
     cpfComputado = new ArrayList<>();
     totalVotos = 0;
   }
 
+  /**
+   * Metodo para Cadastrar Pessoa Candidata.
+   */
   public void cadastrarPessoaCandidata(String nome, int numero) {
     boolean exist = false;
     for (PessoaCandidata pessoaCandidata : pessoasCandidatas) {
@@ -32,6 +39,9 @@ public class GerenciamentoVotacao {
     }
   }
 
+  /**
+   * Metodo para Cadastrar Pessoa Eleitora.
+   */
   public void cadastrarPessoaEleitora(String nome, String cpf) {
     boolean exist = false;
     for (PessoaEleitora pessoaEleitora : pessoasEleitoras) {
@@ -48,6 +58,9 @@ public class GerenciamentoVotacao {
     }
   }
 
+  /**
+   * Metodo para Computar Votos.
+   */
   public void votar(String cpfPessoaEleitora, int numeroPessoaCandidata) {
     boolean exist = false;
     for (String cpf : cpfComputado) {
@@ -69,6 +82,9 @@ public class GerenciamentoVotacao {
     }
   }
 
+  /**
+   * Metodo para Mostrar Resultados.
+   */
   public void mostrarResultado() {
     if (totalVotos == 0) {
       System.out.println("É preciso ter pelo menos um voto para mostrar o resultado");
@@ -92,6 +108,9 @@ public class GerenciamentoVotacao {
     System.out.println(stringBuilderTotal);
   }
 
+  /**
+   * Metodo para Calcular Porcentagem dos Votos.
+   */
   private double calcularPorcentagemVotos(PessoaCandidata pc) {
     return Math.round(((double) pc.getVotos() / (double) totalVotos) * 100);
   }

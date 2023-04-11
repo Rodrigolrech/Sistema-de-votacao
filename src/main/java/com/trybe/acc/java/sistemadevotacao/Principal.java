@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Principal {
 
+  /**
+   * Metodo Main.
+   */
   public static void main(String[] args) {
     System.out.println("----------- Bem-vindo ao Sistema de Votação -----------");
     GerenciamentoVotacao gv = new GerenciamentoVotacao();

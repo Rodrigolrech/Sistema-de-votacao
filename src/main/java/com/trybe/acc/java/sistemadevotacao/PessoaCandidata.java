@@ -5,6 +5,9 @@ public class PessoaCandidata extends Pessoa {
   private int numero;
   private int votos;
 
+  /**
+   * Metodo Construtor.
+   */
   public PessoaCandidata(String nome, int numero) {
     setNome(nome);
     this.numero = numero;
