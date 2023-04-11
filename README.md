@@ -1,5 +1,7 @@
 
-## Para poder testar o código em sua maquina siga as informações abaixo
+## Sistema de Votação
+
+Para poder testar o código em sua maquina siga as informações abaixo
 
 1. Clone o repositório
 
